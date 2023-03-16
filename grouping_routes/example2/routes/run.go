@@ -11,6 +11,8 @@ func Run() {
 
 func getRoutes() {
 	uni := r.Group("/university")
+	addRoutes(uni)
 
-	sub := r.Group("/subjects")
+	deg := r.Group("/degree")
+	addDegreeRoutes(deg)
 }

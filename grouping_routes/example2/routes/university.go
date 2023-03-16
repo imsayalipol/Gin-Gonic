@@ -6,8 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func addRoutes(rg *gin.Context) {
-	uniName := rg.Group("/un")
+func addRoutes(rg *gin.RouterGroup) {
+	uniName := rg.Group("/un")			//url: http://localhost:5000/university/un/
 
 	uniName.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Welcome Students !!!")
